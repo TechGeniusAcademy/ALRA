@@ -1,3 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow admin panel
+Disallow: /admin
+Disallow: /api
+
+# Sitemap
+Sitemap: https://alraeco.com/sitemap.xml

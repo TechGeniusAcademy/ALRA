@@ -1,0 +1,366 @@
+.contacts-container {
+  padding: 0 0 20px 0;
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contacts-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contacts-filter {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-filter label {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.contacts-filter select {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.contacts-loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.contacts-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.contacts-empty {
+  background-color: #f8f9fa;
+  padding: 30px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.contacts-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  overflow: hidden;
+  animation: fadeInUp 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+.contacts-table th, .contacts-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.contacts-table th {
+  background: rgba(79, 172, 254, 0.07);
+  color: #2b2d42;
+  font-weight: 600;
+}
+
+.contacts-table tr {
+  transition: background 0.2s;
+}
+
+.contacts-table tr:hover td {
+  background: rgba(79, 172, 254, 0.04);
+}
+
+.contacts-table td {
+  color: #4a4a4a;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.unread-row {
+  font-weight: 600;
+  background-color: #f0f8ff;
+}
+
+.unread-row:hover {
+  background-color: #e6f2ff !important;
+}
+
+.subject-cell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-status {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact-status.new {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+}
+
+.contact-status.answered {
+  background: rgba(255, 193, 7, 0.1);
+  color: #FFC107;
+}
+
+.contact-status.closed {
+  background: rgba(244, 67, 54, 0.1);
+  color: #F44336;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.view-button,
+.mark-read-button,
+.mark-replied-button,
+.delete-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.view-button:hover {
+  background-color: #0b7dda;
+}
+
+.mark-read-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.mark-read-button:hover {
+  background-color: #388e3c;
+}
+
+.mark-replied-button {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.mark-replied-button:hover {
+  background-color: #7b1fa2;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Стили для модального окна */
+.contact-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.contact-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 600px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.contact-modal h3 {
+  margin-top: 0;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-details {
+  margin: 15px 0;
+}
+
+.contact-detail {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.detail-label {
+  min-width: 80px;
+  font-weight: 600;
+  color: #555;
+}
+
+.detail-value {
+  flex: 1;
+}
+
+.detail-value a {
+  color: #2196F3;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.detail-value a:hover {
+  text-decoration: underline;
+}
+
+.contact-message {
+  margin: 20px 0;
+}
+
+.contact-message h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.message-content {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+
+.contact-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.modal-button {
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.modal-button i {
+  margin-right: 8px;
+}
+
+.email-reply-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+}
+
+.email-reply-button:hover {
+  background-color: #0b7dda;
+}
+
+.email-reply-button a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.close-button {
+  margin-left: auto;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.close-button:hover {
+  background-color: #e5e5e5;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .contacts-page {
+    padding: 0.5rem;
+  }
+  .contacts-table th, .contacts-table td {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .contacts-table {
+    font-size: 0.95rem;
+  }
+  .contacts-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contacts-filter {
+    margin-top: 10px;
+  }
+  
+  .contacts-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .contact-modal-actions {
+    flex-direction: column;
+  }
+  
+  .email-reply-button, .close-button {
+    width: 100%;
+  }
+} 

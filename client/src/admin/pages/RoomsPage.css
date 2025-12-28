@@ -1,0 +1,389 @@
+.rooms-container {
+  padding: 0 0 20px 0;
+}
+
+.rooms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rooms-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.add-room-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.add-room-button:hover {
+  background-color: #388e3c;
+}
+
+.add-room-button i {
+  margin-right: 8px;
+}
+
+.rooms-loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.rooms-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.rooms-empty {
+  background-color: #f8f9fa;
+  padding: 30px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.rooms-page {
+  padding: 1rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.room-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  animation: fadeInUp 0.6s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.room-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  color: #999;
+  font-size: 1rem;
+  border-radius: 16px 16px 0 0;
+}
+
+.room-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b2d42;
+  margin: 0 0 0.5rem 0;
+}
+
+.room-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4facfe;
+  margin: 0 0 0.5rem 0;
+}
+
+.room-capacity {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.room-capacity i {
+  margin-right: 5px;
+}
+
+.room-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.status-available {
+  color: #4caf50;
+}
+
+.status-occupied {
+  color: #f44336;
+}
+
+.status-maintenance {
+  color: #ff9800;
+}
+
+.status-button,
+.edit-button,
+.delete-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  transition: background-color 0.3s;
+}
+
+.status-button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.status-button:hover {
+  background-color: #e68a00;
+}
+
+.edit-button {
+  background-color: #2196F3 !important;
+  color: white;
+  text-decoration: none;
+}
+
+.edit-button:hover {
+  background-color: #0b7dda;
+}
+
+.delete-button {
+  background-color: #e74c3c !important;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.delete-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.delete-modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.delete-warning {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.cancel-button, .confirm-button {
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+.cancel-button:hover {
+  background-color: #e5e5e5;
+}
+
+.confirm-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.confirm-button:hover {
+  background-color: #c0392b;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .rooms-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .rooms-page {
+    padding: 0.5rem;
+  }
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+  .room-card {
+    padding: 0.5rem;
+  }
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.room-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b2d42;
+  margin: 0;
+}
+
+.room-details {
+  margin-bottom: 1.5rem;
+}
+
+.room-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.room-detail i {
+  width: 20px;
+  margin-right: 0.5rem;
+  color: #4facfe;
+}
+
+.room-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+/* Стили для модального окна статуса */
+.status-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.status-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.status-modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.status-buttons {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-option {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.status-option:hover {
+  opacity: 0.9;
+}
+
+.modal-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+} 

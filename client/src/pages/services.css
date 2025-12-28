@@ -1,0 +1,702 @@
+/* Общие стили страницы */
+.alra-services-container {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: #414628;
+  background-color: #fcfcfc;
+}
+
+/* Секция героя */
+.alra-services-hero {
+  padding: 100px 0 60px;
+  text-align: center;
+  background: url('https://i.postimg.cc/fRLW4QpJ/Frame-1506.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.alra-services-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.alra-services-title {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0 0 20px;
+  text-shadow: 0 0 10px #2c2c2c;
+}
+
+.alra-services-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  text-shadow: 0 0 10px #000000;
+}
+
+/* Интро секция */
+.alra-services-intro {
+  padding: 0 0 60px;
+}
+
+.alra-services-intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.alra-services-intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Список категорий услуг */
+.alra-services-list {
+  padding: 0 0 80px;
+}
+
+.alra-services-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.alra-service-category {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.alra-service-category-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  cursor: pointer;
+  background-color: #fcfcfc;
+  transition: background-color 0.3s ease;
+}
+
+.alra-service-category-header:hover {
+  background-color: #f5f5f5;
+}
+
+.alra-service-active .alra-service-category-header {
+  background-color: #414628;
+  color: white;
+  .alra-service-category-title {
+    color: white;
+  }
+}
+
+.alra-service-category-icon {
+  font-size: 2rem;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(116, 161, 46, 0.1);
+  border-radius: 50%;
+}
+
+.alra-service-active .alra-service-category-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  
+}
+
+.alra-service-category-title {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.alra-service-category-toggle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.alra-service-category-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.alra-service-active .alra-service-category-content {
+  max-height: 2000px; /* Большое значение для анимации */
+}
+
+.alra-service-items {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.alra-service-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fcfcfc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.alra-service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.alra-service-item-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.alra-service-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.alra-service-item:hover .alra-service-item-image img {
+  transform: scale(1.05);
+}
+
+.alra-service-item-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.alra-service-item-title {
+  font-size: 1rem;
+  color: #414628;
+  margin: 0 0 15px;
+  font-weight: 500;
+}
+
+.alra-service-item-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.alra-service-item-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #74a12e;
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+}
+
+/* Бронирование услуг */
+.alra-booking-section {
+  padding: 80px 0;
+  background-color: #edefe8;;
+}
+
+.alra-booking-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.alra-booking-title {
+  font-size: 2rem;
+  color: #414628;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.alra-booking-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.alra-service-booking-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.alra-booking-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.alra-form-group {
+  margin-bottom: 5px;
+}
+
+.alra-form-full {
+  grid-column: span 2;
+}
+
+.alra-form-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.alra-form-input,
+.alra-form-select,
+.alra-form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alra-form-input:focus,
+.alra-form-select:focus,
+.alra-form-textarea:focus {
+  outline: none;
+  border-color: #74a12e;
+  box-shadow: 0 0 0 3px rgba(116, 161, 46, 0.1);
+}
+
+.alra-form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.alra-form-submit {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.alra-form-button {
+  background-color: #414628;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 14px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.alra-form-button:hover {
+  background-color: #2a2e18;
+  transform: translateY(-3px);
+}
+
+/* Успешная отправка формы */
+.alra-booking-success {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.alra-success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #74a12e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.alra-success-title {
+  font-size: 1.5rem;
+  color: #414628;
+  margin: 0 0 15px;
+}
+
+.alra-success-text {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Адаптивность */
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+  .alra-service-items {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .alra-services-title {
+    font-size: 2.2rem;
+  }
+  
+  .alra-services-subtitle {
+    font-size: 1rem;
+  }
+  
+  .alra-booking-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .alra-form-full {
+    grid-column: span 1;
+  }
+  
+  .alra-service-items {
+    grid-template-columns: 1fr;
+  }
+  
+  .alra-service-category-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .alra-service-category-title {
+    font-size: 1.2rem;
+    color: #414628;
+  }
+  
+  .alra-booking-form {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .alra-services-hero {
+    padding: 80px 0 40px;
+  }
+  
+  .alra-service-category-header {
+    padding: 15px 20px;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .alra-services-container,
+  .alra-service-section-container {
+    max-width: 100%;
+  }
+  
+  .alra-service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .alra-service-detail-wrapper {
+    flex-direction: column;
+  }
+  
+  .alra-service-detail-image,
+  .alra-service-detail-content {
+    width: 100%;
+  }
+  
+  .alra-service-detail-image {
+    margin-bottom: 30px;
+  }
+  
+  .alra-featured-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .alra-service-hero {
+    padding: 120px 0 60px;
+  }
+  
+  .alra-service-title {
+    font-size: 1.5rem;
+  }
+  
+  .alra-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .alra-booking-steps {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .alra-booking-step {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .alra-service-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .alra-service-tab {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .alra-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .alra-service-section {
+    padding: 60px 0;
+  }
+  
+  .alra-service-section-title {
+    font-size: 2rem;
+  }
+  
+  .alra-service-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .alra-service-hero {
+    padding: 100px 0 50px;
+  }
+  
+  .alra-service-title {
+    font-size: 1.5rem;
+  }
+  
+  .alra-service-subtitle {
+    font-size: 1rem;
+  }
+  
+  .alra-service-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .alra-service-item {
+    padding: 20px;
+  }
+  
+  .alra-service-name {
+    font-size: 1.3rem;
+  }
+  
+  .alra-service-description {
+    font-size: 0.9rem;
+  }
+  
+  .alra-service-price {
+    font-size: 1.1rem;
+  }
+  
+  .alra-service-section-title {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+  
+  .alra-service-section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .alra-service-detail-title {
+    font-size: 1.8rem;
+  }
+  
+  .alra-service-detail-desc {
+    font-size: 0.9rem;
+  }
+  
+  .alra-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .alra-featured-services {
+    grid-template-columns: 1fr;
+  }
+  
+  .alra-service-benefits {
+    grid-template-columns: 1fr;
+  }
+  
+  .alra-service-benefit {
+    padding: 15px;
+  }
+  
+  .alra-service-benefit-title {
+    font-size: 1.2rem;
+  }
+  
+  .alra-service-detail-list li {
+    font-size: 0.9rem;
+  }
+  
+  .alra-service-section {
+    padding: 50px 0;
+  }
+  
+  .alra-service-cta {
+    padding: 30px 20px;
+  }
+  
+  .alra-service-cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .alra-service-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .alra-service-hero {
+    padding: 80px 0 40px;
+  }
+  
+  .alra-service-title {
+    font-size: 1.8rem;
+  }
+  
+  .alra-service-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .alra-service-container,
+  .alra-service-section-container {
+    padding: 0 15px;
+  }
+  
+  .alra-service-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .alra-service-section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  
+  .alra-service-item {
+    padding: 15px;
+  }
+  
+  .alra-service-name {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .alra-service-detail-title {
+    font-size: 1.5rem;
+  }
+  
+  .alra-service-cta-title {
+    font-size: 1.3rem;
+  }
+  
+  .alra-service-cta-text {
+    font-size: 0.9rem;
+  }
+  
+  .alra-booking-steps {
+    gap: 20px;
+  }
+  
+  .alra-booking-step-title {
+    font-size: 1.1rem;
+  }
+  
+  .alra-booking-step-desc {
+    font-size: 0.9rem;
+  }
+  
+  .alra-service-section {
+    padding: 40px 0;
+  }
+  
+  .alra-service-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .alra-service-title {
+    font-size: 1.5rem;
+  }
+  
+  .alra-service-section-title {
+    font-size: 1.3rem;
+  }
+  
+  .alra-service-detail-title {
+    font-size: 1.3rem;
+  }
+  
+  .alra-service-price {
+    font-size: 1rem;
+  }
+  
+  .alra-service-button {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .alra-service-detail-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .alra-service-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .alra-service-cta {
+    padding: 25px 15px;
+  }
+  
+  .alra-booking-step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+} 
+

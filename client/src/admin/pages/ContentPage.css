@@ -1,0 +1,258 @@
+.content-container {
+  padding: 0 0 20px 0;
+}
+
+.content-tabs {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-right: 1px solid #eee;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+  transition: background-color 0.3s;
+  flex: 1;
+}
+
+.tab-button:last-child {
+  border-right: none;
+}
+
+.tab-button:hover {
+  background-color: #f5f5f5;
+}
+
+.tab-button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content-loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.content-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.content-empty {
+  background-color: #f8f9fa;
+  padding: 30px;
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-empty p {
+  margin-bottom: 20px;
+}
+
+.add-content-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.add-content-button:hover {
+  background-color: #388e3c;
+}
+
+.add-content-button i {
+  margin-right: 8px;
+}
+
+.content-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-section-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.section-order {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.section-content {
+  margin-bottom: 20px;
+}
+
+.section-content p {
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.section-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #0b7dda;
+}
+
+.edit-button i {
+  margin-right: 8px;
+}
+
+.add-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Стили для формы редактирования */
+.section-edit-form {
+  padding: 10px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-button,
+.save-button {
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.cancel-button:hover {
+  background-color: #e5e5e5;
+}
+
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.save-button:hover {
+  background-color: #388e3c;
+}
+
+@media (max-width: 768px) {
+  .content-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    flex-basis: 50%;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .tab-button:nth-child(2n) {
+    border-right: none;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .cancel-button, .save-button {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,22 @@
+
+@font-face {
+    font-family: 'cridea'; 
+    src: url('../assets/fonts/cridea.otf') format('opentype');
+    
+    font-weight: normal;
+    font-style: normal;
+  }
+
+ @font-face {
+    font-family: 'masvol'; 
+    src: url('../assets/fonts/cd-masvol-thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  body {
+    font-family: 'masvol', sans-serif; 
+    font-family: 'cridea', sans-serif; 
+  }
+  

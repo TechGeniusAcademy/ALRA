@@ -1,0 +1,281 @@
+.booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  padding-top: 35px;
+}
+
+.booking-modal {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+}
+
+.booking-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.booking-modal-close:hover {
+  color: #000;
+}
+
+.booking-modal-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.booking-modal-room-title {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form-row {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.booking-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.booking-form-group input,
+.booking-form-group select,
+.booking-form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.booking-form-group input:focus,
+.booking-form-group select:focus,
+.booking-form-group textarea:focus {
+  border-color: #9c8b7a;
+  outline: none;
+}
+
+.booking-total-price {
+  background-color: #f8f4f0;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.booking-total-price p {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.booking-submit-btn {
+  background-color: #9c8b7a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.booking-submit-btn:hover {
+  background-color: #86776a;
+}
+
+.booking-submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.booking-error {
+  background-color: #fee;
+  color: #e33;
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.booking-success {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.booking-success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 0 auto 20px;
+}
+
+.booking-success h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.booking-success p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.booking-btn {
+  background-color: #9c8b7a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-btn:hover {
+  background-color: #86776a;
+}
+
+@media (max-width: 768px) {
+  .booking-form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Стили для секции дополнительных услуг */
+.booking-services-section {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.services-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.service-price {
+  color: #666;
+  font-size: 14px;
+}
+
+.service-description {
+  color: #777;
+  font-size: 12px;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.service-quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-btn:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-value {
+  width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.services-loading {
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+} 

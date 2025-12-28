@@ -1,0 +1,116 @@
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f6f9fc 0%, #f1f4f9 100%);
+  animation: fadeIn 0.7s ease-out;
+}
+
+.admin-login-container {
+  background: rgba(255,255,255,0.97);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeInUp 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.admin-login-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-login-logo h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2b2d42;
+  margin-bottom: 0.5rem;
+}
+
+.admin-login-logo p {
+  color: #666;
+  margin: 0;
+}
+
+.admin-login-form {
+  width: 100%;
+}
+
+.admin-login-error {
+  color: #F44336;
+  background: rgba(244, 67, 54, 0.07);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.admin-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.admin-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2b2d42;
+  font-weight: 500;
+}
+
+.admin-form-group input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.9);
+  color: #2b2d42;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.admin-form-group input:focus {
+  outline: none;
+  border-color: #4facfe;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.13);
+}
+
+.admin-login-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.13);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.admin-login-button:hover {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(79, 172, 254, 0.18);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .admin-login-container {
+    padding: 1.5rem 0.5rem;
+  }
+  .admin-login-logo h1 {
+    font-size: 1.2rem;
+  }
+} 
